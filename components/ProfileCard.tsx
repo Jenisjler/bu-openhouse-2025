@@ -1,14 +1,14 @@
 'use client';
 
 import React from 'react';
-
+import Image from 'next/image';
 
 const ProfileCard: React.FC = () => {
 
     const socialLinks = [
         {
             name: 'Email',
-            href: 'mailto:alex.johnson@example.com',
+            href: 'mailto:suttikarn.sumr@bumail.net',
             icon: (
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
@@ -17,7 +17,18 @@ const ProfileCard: React.FC = () => {
             ),
             color: 'text-red-400 hover:text-red-300'
         },
+
         //TODO: Add more social links here
+        {
+            name: 'LinkedIn',
+            href: 'https://linkedin.com/in/alexjohnson',
+            icon: (
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd" />
+                </svg>
+            ),
+            color: 'text-blue-400 hover:text-blue-300'
+        },
     ];
 
     return (
@@ -40,19 +51,22 @@ const ProfileCard: React.FC = () => {
                         {/* Avatar */}
                         <div className="w-36 h-36 mx-auto mb-2 relative">
                             {/* //TODO: Replace with actual profile picture */}
-                            <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center text-white text-xl sm:text-2xl font-bold shadow-xl">
-                                PIC
-                            </div>                            
+                            <Image
+                                src="/mumin.jpg"
+                                alt="Profile"
+                                fill
+                                className="rounded-full object-cover"
+                            />
                             <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full animate-ping opacity-20"></div>
                         </div>
 
                         {/* Name and Title */}
                         {/* //TODO: Replace with actual name and title */}
                         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2">
-                            Name Surname
+                            mumin save
                         </h1>
                         <div className="inline-block px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full text-blue-200 text-sm sm:text-base border border-blue-400/30  mb-1">
-                            Your Role
+                            web dev
                         </div>
 
                         {/* Contact Information */}
@@ -66,7 +80,7 @@ const ProfileCard: React.FC = () => {
                                     </svg>
                                 </div>
                                 <div>
-                                    <p className="text-white font-medium text-sm sm:text-base">your.email@example.com</p>
+                                    <p className="text-white font-medium text-sm sm:text-base">suttikarn.sumr@bumail.net</p>
                                 </div>
                             </div>
 
@@ -87,7 +101,7 @@ const ProfileCard: React.FC = () => {
                     {/* //TODO: Replace with actual bio */}
                     <div className="max-w-xl mb-2">
                         <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                            Your brief bio goes here. Share a bit about yourself, your interests, and what you do. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, voluptatibus dignissimos nobis libero similique reiciendis animi, nisi nihil soluta praesentium,.
+                            study computer science in bangkok university in phathum thani
                         </p>
                     </div>
 
